@@ -28,8 +28,8 @@ namespace AuthKeyApp.Attributes
             var extractedApiKeyString = extractedApiKey.ToString();
             var user = dbContext.Users.SingleOrDefault(u => u.ApiKeys.Any(k => k.PublicKey == extractedApiKeyString));
 
-Console.WriteLine($"extractedApiKeyString: {extractedApiKeyString}");
-Console.WriteLine($"user: {user}");
+            Console.WriteLine($"extractedApiKeyString: {extractedApiKeyString}");
+            Console.WriteLine($"user: {user}");
 
             if (user == null)
             {
